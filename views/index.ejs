@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Google Login</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <meta name="google-signin-client_id" content=<%= uri %> >
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <style media="screen">
+      .data{
+        /* display: none; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="g-signin2" data-onsuccess="onSignIn">Google</div>
+    <div id="data">
+      <h1>Google Signed In</h1>
+      <h2 class="data1">Welcome to our site</h2>
+      <button class="btn btn-danger" type="button" onclick="signOut()" name="button">SignOut</button>
+    </div>
+    <script type="text/javascript">
+
+
+    </script>
+    <script type="text/javascript" src="/test.js"></script>
+  </body>
+</html>
+
+
+<!-- <html>
+<head>
+  <meta name="google-signin-client_id" content="198686060975-sf1hpnb4g641lcoe426ctrson7jrl1sl.apps.googleusercontent.com">
+</head>
+<body>
+  <div id="my-signin2"></div>
+  <script>
+    function onSuccess(googleUser) {
+      console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    }
+    function onFailure(error) {
+      console.log(error);
+    }
+    function renderButton() {
+      gapi.signin2.render('my-signin2', {
+        'scope': 'profile email',
+        'width': 240,
+        'height': 50,
+        'longtitle': true,
+        'theme': 'dark',
+        'onsuccess': onSuccess,
+        'onfailure': onFailure
+      });
+    }
+  </script>
+
+  <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</body>
+</html> -->
